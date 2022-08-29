@@ -1,7 +1,7 @@
 #include "menuprincipal.hpp"
 
 
-void access_option(int32_t option)
+void MainMenu::access_option(int32_t option)
 {
     bool stay = true;
 

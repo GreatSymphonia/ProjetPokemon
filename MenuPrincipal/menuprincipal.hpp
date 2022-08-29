@@ -3,7 +3,7 @@
 
 #include "../configuration.hpp"
 
-namespace menuprincipal
+namespace MainMenu
 {
 
 void access_option(int32_t option);

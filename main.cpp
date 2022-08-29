@@ -16,7 +16,7 @@ int main(void)
     MenuPrincipal.add_choice("Partie contre un humain");
     MenuPrincipal.add_choice("À propos");
 
-    menuprincipal::access_option(MenuPrincipal.prompt());
+    MainMenu::access_option(MenuPrincipal.prompt());
 
 
 
