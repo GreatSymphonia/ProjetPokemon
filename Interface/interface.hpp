@@ -2,6 +2,7 @@
 #define _INTERFACE_HPP_
 
 #include "../configuration.hpp"
+#include "../tools/tools.hpp"
 
 class interface_dialogue
 {

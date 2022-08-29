@@ -16,6 +16,7 @@ void interface_dialogue::rem_choice(int32_t position)
 
 int32_t interface_dialogue::clr_prompt()
 {
+    clear_screen();
     return interface_dialogue::prompt();
 }
 
@@ -29,9 +30,11 @@ int32_t interface_dialogue::prompt()
         std::cout << it << ".\t: " << this->choices[it] << std::endl;
     }
 
-    std::cout << "\n\nOption : ";
-    // Wait to get 1 and only one element in scanf
-    while(scanf("%i", &to_return) != 1);
+    std::cout << "\n\nOption (0 pour quitter) : ";
+    // Wait to get 1 and only one element in scanf with a valid value
+    while(scanf("%i", &to_return) != 1 
+          || to_return < 1 || to_return > this->choices.size());
+
     return to_return;
 }
 

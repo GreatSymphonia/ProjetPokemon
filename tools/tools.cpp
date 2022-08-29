@@ -9,3 +9,8 @@ void clear_screen(void)
     std::system ("clear");
 #endif
 }
+
+void pause(void)
+{
+    system("pause");
+}

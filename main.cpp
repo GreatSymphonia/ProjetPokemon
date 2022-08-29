@@ -1,5 +1,6 @@
 #include "configuration.hpp"
 #include "Interface/interface.hpp"
+#include "MenuPrincipal/menuprincipal.hpp"
 
 #if APP_MODE
 
@@ -15,7 +16,7 @@ int main(void)
     MenuPrincipal.add_choice("Partie contre un humain");
     MenuPrincipal.add_choice("À propos");
 
-    int32_t option = MenuPrincipal.prompt();
+    menuprincipal::access_option(MenuPrincipal.prompt());
 
 
 
