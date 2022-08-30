@@ -6,7 +6,17 @@ attacks::attacks(kinds kind, types::types type, int8_t accuracy, uint8_t power_s
     this->type = type;
 
     this->accuracy = accuracy;
-    this->power_status = power_status;
+
+    if (this->kind == kinds::STATUS)
+    {
+        this->status = static_cast<types::status>(power_status);
+        this->power  = 0;
+    }
+    else
+    {
+        this->status = types::status::UNINIT;
+        this->power  = power_status;
+    }
 
     this->name = name;
 }

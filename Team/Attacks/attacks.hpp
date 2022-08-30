@@ -21,7 +21,8 @@ private:
     types::types type;
 
     int8_t accuracy;
-    uint8_t power_status;
+    uint8_t power;
+    types::status status;
 
     std::string name;
 

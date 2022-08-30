@@ -23,8 +23,6 @@ Team/Attacks/attacks.cpp
 
 Team/Attacks/attacklist.cpp
 
-Team/Attacks/Types/types.cpp
-
 tools/tools.cpp
 
 main.cpp

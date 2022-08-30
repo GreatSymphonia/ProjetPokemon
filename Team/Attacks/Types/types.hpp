@@ -30,6 +30,16 @@ enum class types {
     FAI
 };
 
+enum class status {
+    UNINIT,
+    POISON,
+    TOX_POISON,
+    BURN,
+    PARALYSIS,
+    SLEEP,
+    FROZEN
+};
+
 // [attack][defender]
 static const float AFFINITIES[NUMBER][NUMBER] = 
 {
