@@ -8,6 +8,8 @@
 #include <cassert>
 #include <array>
 #include <functional>
+#include <filesystem>
+#include <fstream>
 
 #define APP_MODE 1
 #define TST_MODE 0

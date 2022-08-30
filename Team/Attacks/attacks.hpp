@@ -21,7 +21,7 @@ private:
     types::types type;
 
     int8_t accuracy;
-    uint8_t power;
+    uint8_t power_status;
 
     std::string name;
 
@@ -31,7 +31,7 @@ public:
     uint8_t get_power();
 
 public:
-    attacks(kinds kind, types::types type, int8_t accuracy, uint8_t power, std::string name);
+    attacks(kinds kind, types::types type, int8_t accuracy, uint8_t power_status, std::string name);
     ~attacks();
 };
 

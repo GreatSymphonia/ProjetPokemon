@@ -1,13 +1,13 @@
 #include "menuprincipal.hpp"
 
 
-void MainMenu::access_option(int32_t option)
+void MainMenu::access_option(interface_dialogue objet)
 {
     bool stay = true;
 
     while(stay)
     {
-        switch (option)
+        switch (objet.clr_prompt())
         {
         case 0:
             stay = false;

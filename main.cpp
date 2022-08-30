@@ -1,12 +1,21 @@
 #include "configuration.hpp"
 #include "Interface/interface.hpp"
 #include "MenuPrincipal/menuprincipal.hpp"
+#include "Team/Attacks/attacklist.hpp"
+
+namespace fs = std::filesystem;
 
 #if APP_MODE
 
 int main(void)
 {
-    std::cout << "Bienvenue à ce simulateur de " << std::endl;
+    std::cout << "Bienvenue à ce simulateur de Pokémon" << std::endl;
+
+    std::vector<attacks> ListeAttaques;
+
+    fs::path AttackPath = "../reference_files/attacks.txt";
+
+    ListeAttaques = get_attack_list(AttackPath);
     
     interface_dialogue MenuPrincipal;
     MenuPrincipal.add_choice("Création d'équipe");
@@ -16,7 +25,7 @@ int main(void)
     MenuPrincipal.add_choice("Partie contre un humain");
     MenuPrincipal.add_choice("À propos");
 
-    MainMenu::access_option(MenuPrincipal.prompt());
+    MainMenu::access_option(MenuPrincipal);
 
 
 

@@ -33,7 +33,7 @@ int32_t interface_dialogue::prompt()
     std::cout << "\n\nOption (0 pour quitter) : ";
     // Wait to get 1 and only one element in scanf with a valid value
     while(scanf("%i", &to_return) != 1 
-          || to_return < 1 || to_return > this->choices.size());
+          || to_return < 0 || to_return > this->choices.size());
 
     return to_return;
 }
@@ -41,7 +41,7 @@ int32_t interface_dialogue::prompt()
 
 interface_dialogue::interface_dialogue(std::vector<std::string> input)
 {
-    this->choices = input; // copier le vecteur en entrée
+    this->choices = input; // copier le vecteur en entrï¿½e
 }
 
 interface_dialogue::interface_dialogue()

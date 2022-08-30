@@ -6,7 +6,7 @@
 // maybe namespace?
 
 namespace types{
-static const uint8_t NUMBER = 18;
+static const int32_t NUMBER = 18;
 
 enum class types {
     UNINIT,

@@ -2,11 +2,12 @@
 #define _MENUPRINCIPAL_H_
 
 #include "../configuration.hpp"
+#include "../Interface/interface.hpp"
 
 namespace MainMenu
 {
 
-void access_option(int32_t option);
+void access_option(interface_dialogue objet);
 
 }
 
