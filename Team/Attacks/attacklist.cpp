@@ -1,10 +1,8 @@
 #include "attacklist.hpp"
 
 // parses attackes line per line using the provided filepath
-std::vector<attacks> get_attack_list(std::string myfile)
+std::vector<attacks> get_attack_list(fs::path filepath)
 {
-    fs::path filepath = myfile;
-
     assert(fs::exists(filepath));
 
     std::ifstream file(filepath.relative_path().generic_string(), std::ifstream::in);
@@ -27,7 +25,10 @@ std::vector<attacks> get_attack_list(std::string myfile)
             std::cout << "ERREUR: parsing" << std::endl;
         }
 
-        to_return.push_back(attacks(static_cast<attacks::kinds>(kind), static_cast<types::types>(type), accuracy, power_status, name));
+        to_return.push_back(attacks(static_cast<attacks::kinds>(kind)
+                          , static_cast<types::types>(type)
+                          , accuracy, power_status, name)
+                          );
 
     }
     

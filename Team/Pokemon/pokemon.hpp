@@ -39,6 +39,8 @@ public:
     // sets this pokemon's status, returns true if succeded (not already set)
     bool set_status(types::status status);
 
+    void set_nick(std::string nick);
+
 private:
     const std::map<int32_t, float> modifiers = { 
         {-6, 0.25f},
@@ -84,7 +86,7 @@ private:
     int32_t mod_spe;
 
 public:
-    pokemon(std::string Name, std::string NickName, std::array<int, 4> attacks
+    pokemon(std::string Name, std::array<int, 4> attacks
           , statistics stats, uint32_t level);
     ~pokemon();
 };

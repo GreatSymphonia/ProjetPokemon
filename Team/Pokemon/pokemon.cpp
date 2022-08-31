@@ -108,12 +108,18 @@ bool pokemon::set_status(types::status status)
     return false;
 }
 
+void pokemon::set_nick(std::string nick)
+{
+    assert(nick.size() < 20); // not a too long nickname
+    this->NickName = nick;
+}
 
-pokemon::pokemon(std::string Name, std::string NickName, std::array<int, 4> attacks
+
+
+pokemon::pokemon(std::string Name, std::array<int, 4> attacks
                , statistics stats, uint32_t level)
 {
     this->Name = Name;
-    this->NickName = NickName;
     this->attacks_ID = attacks;
     
     this->level = level;

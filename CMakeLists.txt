@@ -23,6 +23,7 @@ Team/Attacks/attacks.cpp
 Team/Attacks/attacklist.cpp
 
 Team/Pokemon/pokemon.cpp
+Team/Pokemon/pokemonlist.cpp
 
 tools/tools.cpp
 

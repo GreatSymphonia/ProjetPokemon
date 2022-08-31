@@ -6,7 +6,7 @@
 
 namespace fs = std::filesystem;
 
-std::vector<attacks> get_attack_list(std::string myfile);
+std::vector<attacks> get_attack_list(fs::path filepath);
 
 
 #endif //!_ATTACKLIST_H_
