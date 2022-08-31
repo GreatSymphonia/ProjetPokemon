@@ -10,6 +10,7 @@
 #include <functional>
 #include <filesystem>
 #include <fstream>
+#include <map>
 
 #define APP_MODE 1
 #define TST_MODE 0

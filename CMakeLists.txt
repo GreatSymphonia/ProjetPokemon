@@ -20,8 +20,9 @@ Team/menuteam.cpp
 Team/team.cpp
 
 Team/Attacks/attacks.cpp
-
 Team/Attacks/attacklist.cpp
+
+Team/Pokemon/pokemon.cpp
 
 tools/tools.cpp
 
