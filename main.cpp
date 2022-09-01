@@ -15,7 +15,7 @@ int main(void)
 
     fs::path AttackPath = "../reference_files/attacks.txt";
 
-    ListeAttaques = get_attack_list(AttackPath);
+    ListeAttaques = getAttackList(moves_path);
     
     interface_dialogue MenuPrincipal;
     MenuPrincipal.add_choice("Création d'équipe");

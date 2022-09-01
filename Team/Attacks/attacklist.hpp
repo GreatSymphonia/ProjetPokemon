@@ -4,9 +4,13 @@
 #include "../../configuration.hpp"
 #include "attacks.hpp"
 
+static const int32_t VOID_VALUE = -127;
+
 namespace fs = std::filesystem;
 
-std::vector<attacks> get_attack_list(fs::path filepath);
+static const std::string moves_path = "../reference_files/pokemon_moves.csv";
+
+std::vector<attacks> getAttackList(fs::path filepath);
 
 
 #endif //!_ATTACKLIST_H_

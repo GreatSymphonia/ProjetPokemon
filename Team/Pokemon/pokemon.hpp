@@ -2,22 +2,12 @@
 #define _POKEMON_H_
 
 #include "../../configuration.hpp"
+#include "stats.hpp"
 #include "../Attacks/Types/types.hpp"
 #include "../Attacks/attacks.hpp"
 
 class pokemon
 {
-public:
-    // pokemon stats
-    struct statistics {
-        uint32_t hp;
-        uint32_t atk;
-        uint32_t def;
-        uint32_t s_atk;
-        uint32_t s_def;
-        uint32_t spe;
-    };
-
 public:
     float getAtk();
     float getDef();
@@ -58,6 +48,7 @@ private:
         { 6, 4.0f}
     };
 
+    static constexpr float PERCENT = 100; 
 
 private:
     // Nom et surnom du pokémon
@@ -74,16 +65,9 @@ private:
 
     uint32_t level;
 
-    statistics stats; 
-
-    // current hp of the pokémon
-    int32_t cur_hp;
-    // stats modifiers from -6 to +6
-    int32_t mod_atk;
-    int32_t mod_def;
-    int32_t mod_s_atk;
-    int32_t mod_s_def;
-    int32_t mod_spe;
+    statistics stats;
+    // hp -> current hp; else modifiers
+    statistics mods;
 
 public:
     pokemon(std::string Name, std::array<int, 4> attacks
